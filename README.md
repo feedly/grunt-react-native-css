@@ -92,7 +92,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-### V 0.1.0 Initial Release
+### V 0.1.1 Initial Release
 
 Integrates with [alexmick/react-native-css](https://github.com/alexmick/react-native-css), waiting for PR [#28](https://github.com/sabeurthabti/react-native-css/pull/28) to switch to official npm module
 
