@@ -49,9 +49,11 @@ Passes the `--pretty` option to react-native-css which outputs a multiline js St
 ```js
 grunt.initConfig({
   react_native_css: {
-    options: {},
-    files: {
-      'dest/style.js': ['src/style.css', 'src/vars.css'],
+    default_options: {
+      options: {},
+      files: {
+        'dest/style.js': ['src/style.css', 'src/vars.css'],
+      },
     },
   },
 });
