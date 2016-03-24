@@ -22,6 +22,13 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
+function warnMissingExpected(path) {
+  if (!grunt.file.exists(path)) {
+    console.log(); // Blank line before warning
+    grunt.warn('File ' + path + ' does not exist. Try running tests with `npm test`.');
+  }
+}
+
 exports.react_native_css = {
   setUp: function(done) {
     // setup here if necessary
@@ -30,18 +37,24 @@ exports.react_native_css = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var actual = grunt.file.read('tmp/default_options.js');
+
+    var expectedPath = 'test/expected/default_options.js';
+    warnMissingExpected(expectedPath);
+    var expected = grunt.file.read(expectedPath);
+    test.equal(actual, expected, 'output a non prettified file.');
 
     test.done();
   },
   custom_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    var actual = grunt.file.read('tmp/custom_options.js');
+
+    var expectedPath = 'test/expected/default_options.js';
+    warnMissingExpected(expectedPath);
+    var expected = grunt.file.read('test/expected/custom_options.js');
+    test.equal(actual, expected, 'output a prettyfied file.');
 
     test.done();
   },

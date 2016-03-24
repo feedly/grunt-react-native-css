@@ -8,16 +8,16 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+var RNC = require('react-native-css');
+var temp = require('tmp');
+var path = require('path');
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+module.exports = function(grunt) {
 
   grunt.registerMultiTask('react_native_css', 'A wrapper for react-native-css', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
+      pretty: false,
     });
 
     // Iterate over all specified file groups.
@@ -34,16 +34,24 @@ module.exports = function(grunt) {
       }).map(function(filepath) {
         // Read file source.
         return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+      }).join(grunt.util.linefeed);
 
-      // Handle options.
-      src += options.punctuation;
+      var tmpfile = temp.fileSync({
+        postfix : '.scss',
+      });
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
+      // Write to temp file.
+      grunt.file.write(tmpfile.name, src);
 
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
+      // Check destination exists
+      if (!grunt.file.exists(path.dirname(f.dest))) {
+        grunt.file.mkdir(path.dirname(f.dest));
+      }
+
+      var rncss = new RNC();
+      rncss.parse(tmpfile.name, f.dest, options.pretty, function (css) {
+        grunt.log.writeln('File "' + f.dest + '" created');
+      });
     });
   });
 

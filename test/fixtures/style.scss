@@ -1,0 +1,16 @@
+$colour-base: #656656;
+
+.description {
+	flex: 102;
+	margin: 2px 3px 4px;
+	font-size: 18px;
+	text-align: center;
+	color: $colour-base;
+}
+
+.container {
+
+	padding: 30px;
+	margin-top: 65px;
+	align-items: center;
+}
