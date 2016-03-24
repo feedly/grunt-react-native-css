@@ -1,4 +1,4 @@
-# grunt-react-native-css [![Build Status](https://travis-ci.org/alexmick/grunt-react-native-css.svg?branch=master)](https://travis-ci.org/alexmick/grunt-react-native-css)
+# grunt-react-native-css [![Build Status](https://travis-ci.org/alexmick/grunt-react-native-css.svg?branch=master)](https://travis-ci.org/alexmick/grunt-react-native-css) [![npm](https://img.shields.io/npm/dt/grunt-react-native-css.svg)](https://www.npmjs.com/package/grunt-react-native-css)
 
 > A wrapper for react-native-css, a css to react-native StyleSheet Syntax by [@sabeurthabti](https://github.com/sabeurthabti/react-native-css) :clap:
 
@@ -37,50 +37,55 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.pretty
+Type: `Boolean`
+Default value: `false`
 
-A string value that is used to do something with whatever.
+Passes the `--pretty` option to react-native-css which outputs a multiline js StyleSheet file.
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
 
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+### Usage Example
 
 ```js
 grunt.initConfig({
   react_native_css: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/style.js': ['src/style.css', 'src/vars.css'],
     },
   },
 });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+
+### About watching
+
+This plugin does not wrap the use of the `-w` flag for _react-native-css_ because grunt has it's own file watcher under the hood. Just install :
+
+```shell
+npm install grunt-contrib-watch --save-dev
+```
+
+Add the task to you GruntFile
 
 ```js
-grunt.initConfig({
+grunt.loadNpmTasks('grunt-contrib-watch');
+```
+
+And tell watch to fire the `react_native_css` task on file changes
+
+```js
+watch: {
   react_native_css: {
+    files: ['**/*.css', '**/*.scss'],
+    tasks: ['react_native_css'],
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      interrupt: true,
     },
   },
-});
+}
 ```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
