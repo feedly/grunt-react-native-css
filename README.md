@@ -1,6 +1,6 @@
 # grunt-react-native-css [![Build Status](https://travis-ci.org/alexmick/grunt-react-native-css.svg?branch=master)](https://travis-ci.org/alexmick/grunt-react-native-css)
 
-> A wrapper for react-native-css, a css to react-native StyleSheet Syntax by [sabeurthabti](https://github.com/sabeurthabti/react-native-css) :clap:
+> A wrapper for react-native-css, a css to react-native StyleSheet Syntax by [@sabeurthabti](https://github.com/sabeurthabti/react-native-css) :clap:
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`

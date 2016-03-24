@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "npm run expected && grunt test",
-    "expected": "react-native-css test/fixtures/style.css test/expected/default_options.js && react-native-css test/fixtures/style.scss test/expected/custom_options.js --pretty"
+    "expected": "mkdir -p test/expected && react-native-css test/fixtures/style.css test/expected/default_options.js && react-native-css test/fixtures/style.scss test/expected/custom_options.js --pretty"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
