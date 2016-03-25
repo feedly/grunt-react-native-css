@@ -1,7 +1,7 @@
 {
   "name": "grunt-react-native-css",
   "description": "A wrapper for react-native-css",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/alexmick/grunt-react-native-css",
   "author": {
     "name": "Alexander Micklewright",
@@ -23,8 +23,7 @@
     "expected": "mkdir -p test/expected && react-native-css test/fixtures/style.css test/expected/default_options.js && react-native-css test/fixtures/style.scss test/expected/custom_options.js --pretty"
   },
   "dependencies": {
-    "react-native-css": "github:alexmick/react-native-css",
-    "tmp": "0.0.28"
+    "react-native-css": "^1.2.37"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

@@ -94,6 +94,10 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+### V 0.1.4 react-native-css source update
+
+Use the official `react-native-css` instead of personal fork
+
 ### V 0.1.3 Async update
 
 Improve reliability of async task
