@@ -1,7 +1,7 @@
 {
   "name": "grunt-react-native-css",
   "description": "A wrapper for react-native-css",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/alexmick/grunt-react-native-css",
   "author": {
     "name": "Alexander Micklewright",
