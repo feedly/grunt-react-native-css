@@ -19,6 +19,7 @@ module.exports = function(grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       pretty: false,
+      literal: false,
     });
 
     var files = this.files.slice();
@@ -44,7 +45,7 @@ module.exports = function(grunt) {
       }
 
       var rncss = new RNC();
-      rncss.parse(f.src[0], f.dest, options.pretty, function () {
+      rncss.parse(f.src[0], f.dest, options.pretty, options.literal, function () {
         grunt.log.writeln('File "' + f.dest + '" created');
         process();
       });

@@ -16,16 +16,16 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'tasks/*.js',
-        '<%= nodeunit.tests %>'
+        '<%= nodeunit.tests %>',
       ],
       options: {
-        jshintrc: '.jshintrc'
-      }
+        jshintrc: '.jshintrc',
+      },
     },
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: ['tmp'],
     },
 
     // Configuration to be run (and then tested).
@@ -35,22 +35,23 @@ module.exports = function(grunt) {
         },
         files: {
           'tmp/default_options.js': ['test/fixtures/style.css'],
-        }
+        },
       },
       custom_options: {
         options: {
-          pretty: true
+          pretty: true,
+          literal:true,
         },
         files: {
           'tmp/custom_options.js': ['test/fixtures/style.scss']
-        }
-      }
+        },
+      },
     },
 
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js']
-    }
+    },
   });
 
   // Actually load this plugin's task(s).

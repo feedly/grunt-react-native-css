@@ -94,6 +94,10 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+### V 0.1.5 Support react-native-css --literal flag
+
+Option literal now supported as added in https://github.com/sabeurthabti/react-native-css/pull/29
+
 ### V 0.1.4 react-native-css source update
 
 Use the official `react-native-css` instead of personal fork
