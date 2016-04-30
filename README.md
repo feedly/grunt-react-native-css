@@ -43,6 +43,12 @@ Default value: `false`
 
 Passes the `--pretty` option to react-native-css which outputs a multiline js StyleSheet file.
 
+#### options.literal
+Type: `Boolean`
+Default value: `false`
+
+Passes the `--literal` option to react-native-css which outputs a simple js object instead of a StyleSheet.create() object.
+
 
 ### Usage Example
 
@@ -93,6 +99,8 @@ watch: {
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+### V 0.1.6 Documentation update
 
 ### V 0.1.5 Support react-native-css --literal flag
 
