@@ -9,4 +9,4 @@ node_js:
   - "4.1"
   - "4.0"
 before_install:
-  - "npm install react@^0.14.5 react-native"
+  - "npm install react@^15.1.0 react-native@^0.27.0"
