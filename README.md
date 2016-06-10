@@ -1,4 +1,4 @@
-# grunt-react-native-css [![Build Status](https://travis-ci.org/alexmick/grunt-react-native-css.svg?branch=master)](https://travis-ci.org/alexmick/grunt-react-native-css) [![npm](https://img.shields.io/npm/dt/grunt-react-native-css.svg)](https://www.npmjs.com/package/grunt-react-native-css)
+# grunt-react-native-css [![Build Status](https://travis-ci.org/feedly/grunt-react-native-css.svg?branch=master)](https://travis-ci.org/feedly/grunt-react-native-css) [![npm](https://img.shields.io/npm/dt/grunt-react-native-css.svg)](https://www.npmjs.com/package/grunt-react-native-css)
 
 > A wrapper for react-native-css, a css to react-native StyleSheet Syntax by [@sabeurthabti](https://github.com/sabeurthabti/react-native-css) :clap:
 
@@ -99,6 +99,8 @@ watch: {
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+### V 1.0.0 Transfer ownership from [@alexmick](https://github.com/alexmick) to @feedly
 
 ### V 0.1.6 Documentation update
 

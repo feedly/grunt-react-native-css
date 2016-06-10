@@ -1,18 +1,18 @@
 {
   "name": "grunt-react-native-css",
   "description": "A wrapper for react-native-css",
-  "version": "0.1.6",
-  "homepage": "https://github.com/alexmick/grunt-react-native-css",
+  "version": "1.0.0",
+  "homepage": "https://github.com/feedly/grunt-react-native-css",
   "author": {
     "name": "Alexander Micklewright",
-    "email": "alexmick@users.noreply.github.com"
+    "email": "alex@feedly.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alexmick/grunt-react-native-css.git"
+    "url": "git://github.com/feedly/grunt-react-native-css.git"
   },
   "bugs": {
-    "url": "https://github.com/alexmick/grunt-react-native-css/issues"
+    "url": "https://github.com/feedly/grunt-react-native-css/issues"
   },
   "license": "MIT",
   "engines": {

@@ -1,8 +1,8 @@
 /*
  * grunt-react-native-css
- * https://github.com/alexmick/grunt-react-native-css
+ * https://github.com/feedly/grunt-react-native-css
  *
- * Copyright (c) 2016 Alexander Micklewright
+ * Copyright (c) 2016 devHD
  * Licensed under the MIT license.
  */
 
